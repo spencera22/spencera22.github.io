@@ -4,3 +4,7 @@
 
 layout: home
 ---
+
+# Yet to be named blog!
+
+What does this text look like?
