@@ -57,7 +57,7 @@ excerpt_seperator: <!--more-->
 #   transit - transit line bullets (_data/transit_initials.yml), shaded ASCII
 #             for letters without one
 # A page can override it with `dropcap: <style>` in its front matter.
-dropcap_style: transit
+dropcap_style: shadow
 
 flickr:
   api_key: 91880c02c1e7f5e0e30a8caeb9557080
