@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://s-aeschliman.github.io/sitemap.xml
+Sitemap: https://spencera22.github.io/sitemap.xml

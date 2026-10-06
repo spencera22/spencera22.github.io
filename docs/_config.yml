@@ -23,7 +23,7 @@ email: aesch.spencer@gmail.com
 description: >-
   Spencer Aeschliman
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://s-aeschliman.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://spencera22.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 og_image: /assets/images/loze_profile.png
 author: 
   name: Spencer Aeschliman
@@ -34,7 +34,7 @@ twitter:
   card: summary
   
 twitter_username: Aeschliman1
-github_username:  s-aeschliman
+github_username:  spencera22
 googlescholar_username: citations?user=7gfWWf4AAAAJ&hl=en
 flickr_username: 199776332@N03
 linkedin_username: spencer-aeschliman-a830aa117
