@@ -51,8 +51,13 @@ kramdown:
   math_engine: mathjax
 excerpt_seperator: <!--more-->
 
-# Drop cap style for page bodies: plain or shadow (see _includes/dropcap.html)
-dropcap_style: shadow
+# Drop cap style for page bodies, sitewide (see _includes/dropcap.html):
+#   plain   - ASCII initial
+#   shadow  - ASCII initial in a shaded box
+#   transit - transit line bullets (_data/transit_initials.yml), shaded ASCII
+#             for letters without one
+# A page can override it with `dropcap: <style>` in its front matter.
+dropcap_style: transit
 
 flickr:
   api_key: 91880c02c1e7f5e0e30a8caeb9557080

@@ -29,6 +29,49 @@
 .dropcap-shadow { line-height: 1.0182; margin-top: .1909em; margin-bottom: 1.2091em; }
 
 
+/* Transit line bullets: 3 lines tall (3 x 1.4em = 4.2em, less a little room
+   above and below). */
+.dropcap-transit {
+  float: left;
+  width: 3.9em;
+  height: 3.9em;
+  margin: .2em 1.5ch 0 0;
+  position: relative;
+  border-radius: 50%;
+  outline: 1px solid transparent;
+  outline-offset: 2px;
+  transition: outline-color .2s;
+  line-height: 0;
+  user-select: none;
+  svg { display: block; width: 100%; height: 100%; }
+  &:hover { outline-color: #000; }
+  text {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 64px;
+    font-weight: 700;
+  }
+}
+.dropcap-transit-square { border-radius: 18%; }
+
+/* Line credit on hover, styled like the carousel's photo captions. */
+.dropcap-credit {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  z-index: 2;
+  padding: 4px 8px;
+  background: #000;
+  color: #fff;
+  font-size: 11px;
+  font-style: italic;
+  line-height: 1.4;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .2s;
+}
+.dropcap-transit:hover .dropcap-credit { opacity: 1; }
+
 /* The paragraph grows to contain the initial, so a short first paragraph
    doesn't let the next one wrap around it. */
 .has-dropcap { display: flow-root; }

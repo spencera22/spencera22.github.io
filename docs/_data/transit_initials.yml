@@ -1,0 +1,25 @@
+# Transit line bullets for style="transit" drop caps (_includes/initial.html).
+# Self-drawn approximations of real lettered lines, not official artwork.
+# shape: circle (filled), ring (white with coloured border), or square (rounded).
+# Letters missing here fall back to the shaded ASCII initial.
+
+I:
+  name: "I train · Helsinki commuter rail"
+  shape: circle
+  bg: "#8C4799"
+  fg: "#FFFFFF"
+T:
+  name: "Tōzai Line · Tokyo Metro"
+  shape: ring
+  bg: "#009BBF"
+  fg: "#000000"
+W:
+  name: "W train · New York City Subway"
+  shape: circle
+  bg: "#FCCC0A"
+  fg: "#000000"
+Y:
+  name: "Yūrakuchō Line · Tokyo Metro"
+  shape: ring
+  bg: "#C1A470"
+  fg: "#000000"

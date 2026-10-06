@@ -5,14 +5,29 @@
     {% include initial.html letter="Y" %}ou've somehow arrived...
     {: .has-dropcap}
 
-  Optional style="shadow" (default: page.dropcap, then site.dropcap_style,
-  then plain). Outputs nothing if the letter isn't A-Z.
+  Optional style="shadow" or style="transit" (default: page.dropcap, then
+  site.dropcap_style, then plain). Transit bullets come from
+  _data/transit_initials.yml; letters without one get the shaded ASCII initial.
+  Outputs just the letter if it isn't A-Z.
 {%- endcomment -%}
 {%- assign in_style = include.style | default: page.dropcap | default: site.dropcap_style | default: "plain" -%}
 {%- if in_style == true or in_style == false -%}{%- assign in_style = "plain" -%}{%- endif -%}
 {%- assign in_key = include.letter | upcase -%}
+{%- assign in_line = nil -%}
+{%- if in_style == "transit" -%}
+  {%- assign in_line = site.data.transit_initials[in_key] -%}
+  {%- unless in_line -%}{%- assign in_style = "shadow" -%}{%- endunless -%}
+{%- endif -%}
 {%- assign in_art = site.data.dropcaps[in_style][in_key] -%}
-{%- if in_art -%}
+{%- if in_line -%}
+<span class="dropcap-transit dropcap-transit-{{ in_line.shape | default: "circle" }}" aria-hidden="true"><svg viewBox="0 0 100 100">
+{%- case in_line.shape -%}
+{%- when "ring" -%}<circle cx="50" cy="50" r="43" fill="#fff" stroke="{{ in_line.bg }}" stroke-width="12"/>
+{%- when "square" -%}<rect x="2" y="2" width="96" height="96" rx="18" fill="{{ in_line.bg }}"/>
+{%- else -%}<circle cx="50" cy="50" r="49" fill="{{ in_line.bg }}"/>
+{%- endcase -%}
+<text x="50" y="50" dy=".35em" text-anchor="middle" fill="{{ in_line.fg }}">{{ in_key }}</text></svg><span class="dropcap-credit">{{ in_line.name | escape }}</span></span><span class="dropcap-letter">{{ include.letter }}</span>
+{%- elsif in_art -%}
 {%- comment -%} Shaded caps carry the plain art too, for assets/js/dropcaps.js. {%- endcomment -%}
 {%- assign in_plain = site.data.dropcaps.plain[in_key] -%}
 <span class="dropcap dropcap-{{ in_style }}"{% if in_style == "shadow" %} data-plain="{{ in_plain | join: "@@NL@@" | escape | replace: "@@NL@@", "&#10;" }}"{% endif %} aria-hidden="true">{{ in_art | join: "@@NL@@" | escape | replace: "@@NL@@", "&#10;" }}</span><span class="dropcap-letter">{{ include.letter }}</span>
