@@ -20,7 +20,7 @@
 {%- endif -%}
 {%- assign in_art = site.data.dropcaps[in_style][in_key] -%}
 {%- if in_line -%}
-<span class="dropcap-transit dropcap-transit-{{ in_line.shape | default: "circle" }}" aria-hidden="true"><svg viewBox="0 0 100 100">
+<span class="dropcap-transit dropcap-transit-{{ in_line.shape | default: "circle" }}" aria-hidden="true"><svg viewBox="0 0 100 100" width="56" height="56">
 {%- case in_line.shape -%}
 {%- when "ring" -%}<circle cx="50" cy="50" r="43" fill="#fff" stroke="{{ in_line.bg }}" stroke-width="12"/>
 {%- when "square" -%}<rect x="2" y="2" width="96" height="96" rx="18" fill="{{ in_line.bg }}"/>
