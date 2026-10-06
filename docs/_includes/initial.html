@@ -1,0 +1,21 @@
+{%- comment -%}
+  Renders one ASCII drop cap. Put it right before the rest of the first word,
+  and give the paragraph the has-dropcap class:
+
+    {% include initial.html letter="Y" %}ou've somehow arrived...
+    {: .has-dropcap}
+
+  Optional style="shadow" (default: page.dropcap, then site.dropcap_style,
+  then plain). Outputs nothing if the letter isn't A-Z.
+{%- endcomment -%}
+{%- assign in_style = include.style | default: page.dropcap | default: site.dropcap_style | default: "plain" -%}
+{%- if in_style == true or in_style == false -%}{%- assign in_style = "plain" -%}{%- endif -%}
+{%- assign in_key = include.letter | upcase -%}
+{%- assign in_art = site.data.dropcaps[in_style][in_key] -%}
+{%- if in_art -%}
+{%- comment -%} Shaded caps carry the plain art too, for assets/js/dropcaps.js. {%- endcomment -%}
+{%- assign in_plain = site.data.dropcaps.plain[in_key] -%}
+<span class="dropcap dropcap-{{ in_style }}"{% if in_style == "shadow" %} data-plain="{{ in_plain | join: "@@NL@@" | escape | replace: "@@NL@@", "&#10;" }}"{% endif %} aria-hidden="true">{{ in_art | join: "@@NL@@" | escape | replace: "@@NL@@", "&#10;" }}</span><span class="dropcap-letter">{{ include.letter }}</span>
+{%- else -%}
+{{ include.letter }}
+{%- endif -%}

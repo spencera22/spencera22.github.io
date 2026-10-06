@@ -1,0 +1,44 @@
+/* ASCII drop caps for a monospace Jekyll site. Pairs with _includes/dropcap.html
+   and _data/dropcaps.json.
+
+   The initial inherits the paragraph's font and size, so its columns sit on
+   the text's character grid. Its line-height is tuned so the letter's rows
+   fill a whole number of text lines; the values below assume body text at
+   line-height 1.4. For a different line height L, with R rows to fit
+   (plain: 8, shadow: 11):
+     lines = round(R / L)
+     line-height = lines * L / R
+     margin-top = (L - line-height) / 2 em, margin-bottom = the negative of that */
+
+.dropcap {
+  float: left;
+  margin-right: 2ch;             /* keep this a whole number of ch */
+  white-space: pre;
+  font: inherit;
+  font-weight: 700;
+  font-variant-ligatures: none;
+  color: var(--dropcap-color, #a3261f);
+  user-select: none;             /* copying the paragraph copies the words, not the art */
+}
+
+/* 8 rows over 6 lines */
+.dropcap-plain  { line-height: 1.05;   margin-top: .175em;  margin-bottom: -.175em; }
+/* 11 rows (box + shadow) over 8 lines, plus one empty line (1.4em) below so
+   the next line of text doesn't touch the shadow; J and Q tails hang into it.
+   Paragraphs too short to fill the box fall back to plain (assets/js/dropcaps.js). */
+.dropcap-shadow { line-height: 1.0182; margin-top: .1909em; margin-bottom: 1.2091em; }
+
+
+/* The paragraph grows to contain the initial, so a short first paragraph
+   doesn't let the next one wrap around it. */
+.has-dropcap { display: flow-root; }
+
+/* The real first letter stays in the text, hidden visually. */
+.dropcap-letter {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

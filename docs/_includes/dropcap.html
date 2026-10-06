@@ -1,0 +1,24 @@
+{%- comment -%}
+  Renders the page content with an ASCII drop cap on its first paragraph.
+  Use in a layout in place of {{ content }}:  {% include dropcap.html %}
+
+  Style comes from front matter `dropcap: shadow` / `dropcap: plain`, then from
+  `dropcap_style` in _config.yml, then defaults to plain. Set `dropcap: false`
+  on a page to turn it off. Pages whose first paragraph doesn't start with a
+  plain A-Z letter render unchanged. For any other paragraph, see initial.html.
+{%- endcomment -%}
+{%- assign dc_style = page.dropcap | default: site.dropcap_style | default: "plain" -%}
+{%- assign dc_parts = content | split: "<p>" -%}
+{%- assign dc_first = dc_parts[1] -%}
+{%- assign dc_letter = dc_first | slice: 0 -%}
+{%- assign dc_key = dc_letter | upcase -%}
+{%- assign dc_art = nil -%}
+{%- if page.dropcap != false and dc_first -%}
+  {%- assign dc_art = site.data.dropcaps[dc_style][dc_key] -%}
+{%- endif -%}
+{%- if dc_art -%}
+{{ dc_parts[0] }}<p class="has-dropcap">{% include initial.html letter=dc_letter style=dc_style %}{{ dc_first | remove_first: dc_letter }}
+{%- for dc_part in dc_parts offset: 2 -%}<p>{{ dc_part }}{%- endfor -%}
+{%- else -%}
+{{ content }}
+{%- endif -%}

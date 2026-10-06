@@ -51,6 +51,9 @@ kramdown:
   math_engine: mathjax
 excerpt_seperator: <!--more-->
 
+# Drop cap style for page bodies: plain or shadow (see _includes/dropcap.html)
+dropcap_style: shadow
+
 flickr:
   api_key: 91880c02c1e7f5e0e30a8caeb9557080
 

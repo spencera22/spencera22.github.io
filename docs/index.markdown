@@ -26,7 +26,7 @@ carousels:
 
 ---
 
-<div class="intro">You've somehow arrived at the website of Spencer Aeschliman (me). I study travel behavior and the impacts of transit policy. Here you'll find details about my ongoing projects, publications, photography, the odd blog post, and other random things that interest me, if that interests you.</div>
+<div class="intro has-dropcap">{% include initial.html letter="Y" %}ou've somehow arrived at the website of Spencer Aeschliman (me). I study travel behavior and the impacts of transit policy. Here you'll find details about my ongoing projects, publications, photography, the odd blog post, and other random things that interest me, if that interests you.</div>
 <!--
 <div class="above_img_banner">
 
