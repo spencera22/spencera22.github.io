@@ -10,12 +10,12 @@ carousels:
     - image: /assets/images/balloons.jpg
       alt: Balloons over Teotihuacan. Fujica STX-2 + Fujinon 50 mm f/1.9 + Portra 400, Nov. 2025
       position: center 30%
+    - image: /assets/images/tokyo.jpg
+      alt: Tomigaya, Shibuya, Tokyo. Fujica STX-2 + Fujinon 50 mm f/1.9 + CineStill 800T, Sep. 2026
     - image: /assets/images/grand_ronde.jpg
       alt: Grande Ronde River. Fujica STX-2 + Fujinon 50 mm f/1.9 + Portra 400, June 2023 
     - image: /assets/images/anthro.jpg
       alt: Museo Nacional de Antropología, CDMX. Fujica STX-2 + Fujinon 50 mm f/1.9 + Portra 400, March 2023
-    - image: /assets/images/sf.jpg
-      alt: San Francisco. Fuji XT-3 + XF 10-25 mm f/4, June 2021 
     - image: /assets/images/wash.jpg
       alt: Mt. Washington over Big Lake and burnt forest. Fujica STX-2 + Fujinon 50 mm f/1.9 + Portra 400, July 2023
     - image: assets/images/duomo.jpg
