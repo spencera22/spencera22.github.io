@@ -44,7 +44,7 @@ In this Bayesian framework, uncertainty in both imputed values and parameter est
 
   </div>
       <div class="sidebar">
-    I presented a version of this project (and the one above) at <a href="https://transportation.northwestern.edu/news-events/itea2025/itea2025.html">ITEA 2025</a> (Evanston, IL) and will present more at <a href="https://whova.com/web/b0kitYLTonIzVU26vERb8gXZi%404PmOCqTY6zxshGkPQ%3D">MoMo 2025</a> (Minneapolis, MN).
+    Click <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=6504271">here</a> for the pre-print. We recently received journal reviews, so a new and improved manuscript is coming soon. 
   </div>
 </div>
 
