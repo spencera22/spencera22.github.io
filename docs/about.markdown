@@ -6,17 +6,15 @@ order: 2
 last_modified_at: 2026-03-02
 ---
 
-I am a PhD Candidate in Transportation Systems Analysis and Planning at Northwestern University. In the [*Mobility and Behavior Lab*](https://www.amandastathopoulos.com/), I study how people change their travel behavior and preferences, especially in response to policy interventions like transit safety measures. You can see more in the [Projects](/projects.html) tab. I'm also interested in using Bayesian methods in transportation research and demand modeling in general. As of Fall 2023, I am an NSF Graduate Research Fellow. I received my B.A. in Physics from Goshen College (Goshen, IN) in 2019. 
+I am a travel behavior researcher current working on agent-based models at Argonne National Laboratory. I received my PhD in Transportation Systems Analysis and Planning from Northwestern University at the end of summer 2026. There, I worked in the *Mobility and Behavior Lab* studying how to use longitudinal data to understand how people change their travel behaviors and preferences. You can see more in the [Projects](/projecets.html) tab. I'm also interested in using Bayesian methods in transportation research and demand modeling in general. During my studies, I was an NSF Graduate Research Fellow. I received my B.A. in Physics from Goshen College in 2019.
 
 When I am not doing research, I like to play soccer, take photos, ride my bike, [listen to music](https://www.last.fm/user/aesch_spencer), read, and cook.
-
 
 ![cal_pic](assets/images/cal.jpg)
 
 <figcaption class="about_img_caption"><i>Highway 1 near Fort Ross, CA. June 2021</i></figcaption>
 
 <br>
-
 
 #### *Books, Music, and Movies I've Recently Enjoyed*
 
